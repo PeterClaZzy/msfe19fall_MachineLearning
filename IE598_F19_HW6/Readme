@@ -1,0 +1,17 @@
+IE598 MLF F19
+Module 6 Homework (Cross validation)
+Using the ccdefault dataset, with 90% for training and 10% for test (stratified sampling) and the decision tree model that you did in Module 2:
+Part 1: Random test train splits
+Run in-sample and out-of-sample accuracy scores for 10 different samples by changing random_state from 1 to 10 in sequence. 
+Display the individual scores, then calculate the mean and standard deviation on the set of scores.  Report in a table format.
+
+
+
+Part 2: Cross validation
+Now rerun your model using cross_val_scores with k-fold CV (k=10).  
+Report the individual fold accuracy scores, the mean CV score and the standard deviation of the fold scores.  Now run the out-of-sample accuracy score.  Report in a table format.
+
+
+
+Part 3: Conclusions
+Write a short paragraph summarizing your findings.  Which method of measuring accuracy provides the best estimate of how a model will do against unseen data?  Which one is more efficient to run?
