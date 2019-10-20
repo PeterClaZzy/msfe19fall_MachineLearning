@@ -1,0 +1,16 @@
+Conclusion:
+Parameter/Accuracy	KNN	Tree	LGC	SVC	Ensemble
+InvGrd with PCA	k=1, 0.78	N=5, 0.75	C=0.001,0.75	C=0.001,0.85	0.78
+InvGrd without PCA	K=1, 0.81	N=6, 0.79	C=0.0001,0.75	C=0.0001,0.75	0.82
+Rating with PCA	K=1, 0.78	N=10, 0.75	C=0.0001,0.75	C=0.0001,0.75	0.78
+Rating without PCA	K=1, 0.78	N=10, 0.73	C=0.0001,0.75	C=0.0001,0.75	0.77
+
+We find in this case, PCA is not suitable for binary and multiclass classification in this dataset. Because there is no feature with large weight. Also the dataset’s volume is small, we do not need to consider the running time.
+After applying PCA, the accuracy for InvGrd has a little decreased.
+So PCA is not suitbale.
+
+And for ‘Rating’ classification (Multiclass), we must drop the data at the tail of Z-distribution (5% significance level), because the tail is fatter and extreme(Q-Q Plot), they are highly abnormal value, which can be considered as noise.
+
+The KNN (neighbor = 1) has the but performance for this dataset.
+We can use ensemble to increase accuracy for target InvGrd a little, but for Rating, ensemble does not increase.
+Considering the cost of computation, KNN(n=1) may be the best suitable model.
